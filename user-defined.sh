@@ -34,6 +34,7 @@ alias ssh_start='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa_github'
 # Backup to GitHub
 backup()
 {
+	ssh_start
 	git add .
 	git commit -m "Updated Backup"
 	git push origin --all
