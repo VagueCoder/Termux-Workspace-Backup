@@ -31,4 +31,10 @@ alias ll='ls -al'
 # SSH Related
 alias ssh_start='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa_github'
 
-
+# Backup to GitHub
+backup()
+{
+	git add .
+	git commit -m "Updated Backup"
+	git push origin --all
+}
